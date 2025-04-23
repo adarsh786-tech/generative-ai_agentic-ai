@@ -21,7 +21,7 @@ embedder = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 
 vector_store = QdrantVectorStore.from_documents(
     documents=[],
-    collection_name="learning_langchain",
+    collection_name="pdf_content_collection",
     embedding=embedder,
     url=os.getenv("QDRANT_URL"),         # ✅ Let langchain-qdrant create the client
     api_key=os.getenv("QDRANT_API_KEY")  # ✅ Same here
@@ -31,7 +31,7 @@ vector_store.add_documents(split_docs)
 print("Injection Done!!")
 
 retriver = QdrantVectorStore.from_existing_collection(
-    collection_name="learning_langchain",
+    collection_name="pdf_content_collection",
     embedding=embedder,
     url=os.getenv("QDRANT_URL"),         # ✅ Let langchain-qdrant create the client
     api_key=os.getenv("QDRANT_API_KEY")  # ✅ Same here
