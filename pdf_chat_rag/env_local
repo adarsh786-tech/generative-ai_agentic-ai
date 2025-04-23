@@ -1,0 +1,9 @@
+# change the file name to .env from env_local
+
+# add the GOOGLE_API_KEY from Google AI Studio
+
+# add the QDRANT_API_KEY and QDRANT_URL from https://login.cloud.qdrant.io/
+
+GOOGLE_API_KEY=
+QDRANT_URL=
+QDRANT_API_KEY=
